@@ -3,12 +3,313 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ScienceJournal</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta name="description" content="Fyrre — современный журнал о науке и жизни.">
+  <title>Fyrre — Magazine & Science</title>
+  <link rel="stylesheet" href="design/style.css">
 </head>
-<body>
-  <h1>Добро пожаловать в ScienceJournal!</h1>
-  <p>Это стартовая страница моего веб-приложения.</p>
+<body itemscope itemtype="https://schema.org/WebPage">
+
+  <!-- Skip link для доступности -->
+  <a href="#main" class="skip-link" aria-label="Перейти к основному содержимому">Перейти к основному содержимому</a>
+
+  <header class="header" itemprop="header">
+    <div class="header__container">
+      <div class="header__logo">
+        <a href="/" itemprop="url">
+          <svg width="120" height="40" viewBox="0 0 120 40" aria-hidden="true" focusable="false">
+            <rect width="120" height="40" fill="none"/>
+            <text x="0" y="30" font-family="sans-serif" font-size="28" fill="#fff">FYRRE</text>
+          </svg>
+          <span class="visually-hidden">Fyrre — Magazine & Science</span>
+        </a>
+      </div>
+
+      <nav class="nav" role="navigation" aria-label="Основное меню">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="#" class="nav__link">Magazine</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">Authors</a></li>
+          <li class="nav__item">
+            <a href="#" class="nav__link nav__link--social" aria-label="Следите за нами в соцсетях">
+              <span class="visually-hidden">Социальные сети</span>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                <circle cx="8" cy="8" r="8"/>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero-секция с макетом журнала -->
+  <section class="hero" aria-labelledby="hero-title">
+    <h1 id="hero-title" class="visually-hidden">Fyrre Magazine — Science & Life</h1>
+    <div class="hero__container">
+      <div class="hero__preview">
+        <figure class="hero__figure">
+          <img src="images/hero-magazine.jpg" alt="Обложка журнала Fyrre: «Science & LIFE»" 
+               width="600" height="800" loading="lazy">
+          <figcaption class="visually-hidden">Обложка номера журнала Fyrre Science за март 2025 г.</figcaption>
+        </figure>
+      </div>
+
+      <div class="hero__content">
+        <div class="hero__tag">MAGAZINE & Science</div>
+        <h2 class="hero__title">FYRRE</h2>
+        <p class="hero__subtitle">Modern magazine and Science blog.</p>
+      </div>
+    </div>
+  </section>
+
+  <main id="main" class="main" itemprop="mainContentOfPage">
+    <!-- Welcome -->
+    <section class="welcome" aria-labelledby="welcome-heading">
+      <div class="welcome__container">
+        <h2 id="welcome-heading" class="welcome__heading">Welcome</h2>
+        <p class="welcome__text">
+          Thank you for your support. Glad you are here.<br>
+        </p>
+      </div>
+    </section>
+
+    <!-- Getting Started -->
+    <section class="getting-started" aria-labelledby="getting-started-heading">
+      <div class="getting-started__container">
+        <h2 id="getting-started-heading" class="getting-started__heading">Getting started</h2>
+
+        <!-- Assets -->
+        <article class="assets" aria-labelledby="assets-heading">
+          <h3 id="assets-heading" class="assets__heading">
+            <span class="assets__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 16v-4"/>
+                <path d="M12 12v-4"/>
+              </svg>
+            </span>
+            Assets
+          </h3>
+          <div class="assets__body">
+            <p>
+              This design is using assets from pages like Unsplash, Pexels or other assets under a free license. You may need to install fonts that aren’t available on Figma. You are free to use all assets mentioned on the licensing page for personal & commercial use.
+            </p>
+            <p>
+              Check out the page below for all used assets.
+            </p>
+            <a href="#" class="assets__link" aria-describedby="assets-heading">
+              See all assets
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" class="assets__link-icon">
+                <path d="M5 12l5-5 5 5"/>
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Get Webflow Template -->
+        <article class="webflow-template" aria-labelledby="webflow-heading">
+          <h3 id="webflow-heading" class="webflow-template__heading">Get Webflow Template</h3>
+          <div class="webflow-template__card">
+            <div class="webflow-template__icon">
+              <img src="images/webflow-icon.svg" alt="Webflow логотип" width="48" height="48">
+            </div>
+            <div class="webflow-template__info">
+              <h4 class="webflow-template__title">Webflow science magazine Template</h4>
+              <p class="webflow-template__desc">Check out the science magazine.</p>
+            </div>
+            <div class="webflow-template__actions">
+              <a href="#" class="webflow-template__link webflow-template__link--preview" aria-label="Посмотреть живой просмотр шаблона">
+                Live Preview
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" class="webflow-template__link-icon">
+                  <path d="M5 12l5-5 5 5"/>
+                </svg>
+              </a>
+              <a href="#" class="btn btn--primary webflow-template__link webflow-template__link--download" aria-label="Скачать шаблон Webflow science magazine">
+                Get Template
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" class="webflow-template__link-icon">
+                  <path d="M5 12l5-5 5 5"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- License -->
+        <article class="license" aria-labelledby="license-heading">
+          <h3 id="license-heading" class="license__heading">
+            <span class="license__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 16v-4"/>
+                <path d="M12 12v-4"/>
+              </svg>
+            </span>
+            License
+          </h3>
+          <div class="license__body">
+            <p>
+              You can utilize this design in an unlimited number of projects, including commercial and personal projects like websites and apps. However, you are not permitted to resell the files, include them in a product or template that you are selling, publish them online, or distribute them for free.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+
+<!-- === Scientific Article Section === -->
+<section class="scientific-article-section" aria-labelledby="article-title">
+  <div class="scientific-article-wrapper">
+
+    <article class="scientific-article__card"
+             itemscope
+             itemtype="https://schema.org/ScholarlyArticle">
+
+      <header class="scientific-article__header">
+        <span class="scientific-article__tag">Scientific Article</span>
+
+        <h2 id="article-title"
+            class="scientific-article__title"
+            itemprop="headline">
+          Quantum Entanglement in Topological Insulators: Experimental Verification and Theoretical Implications
+        </h2>
+
+        <div class="scientific-article__meta">
+          <time datetime="2025-02-01" itemprop="datePublished">
+            1 февраля 2025 г.
+          </time>
+
+          <span class="scientific-article__separator">•</span>
+
+          <span itemprop="author"
+                itemscope
+                itemtype="https://schema.org/Person">
+            <span itemprop="name">Дмитрий С. Кузнецов</span>
+          </span>
+        </div>
+      </header>
+
+      <div class="scientific-article__body" itemprop="articleBody">
+        <h3>Аннотация</h3>
+        <p itemprop="abstract">
+          В данной работе представлены результаты экспериментальной проверки квантовой
+          запутанности в двумерных топологических изоляторах при температуре 1.8 K.
+          Используя метод сканирующей туннельной спектроскопии с пространственным
+          разрешением, обнаружены устойчивые спиновые корреляции между краевыми
+          состояниями образца, что согласуется с предсказаниями теории топологической
+          защиты. Предложена модифицированная модель электрон-фононного взаимодействия,
+          объясняющая наблюдаемые отклонения от идеального поведения.
+        </p>
+
+        <h3>Ключевые слова</h3>
+        <div class="scientific-article__keywords">
+          <span itemprop="keywords">топологические изоляторы</span>
+          <span itemprop="keywords">квантовая запутанность</span>
+          <span itemprop="keywords">сканирующая туннельная спектроскопия</span>
+          <span itemprop="keywords">спиновые краевые состояния</span>
+        </div>
+      </div>
+
+      <figure class="scientific-article__figure"
+              itemprop="image"
+              itemscope
+              itemtype="https://schema.org/ImageObject">
+        <img src="images/part.jpg"
+             alt="Схема экспериментальной установки: топологический изолятор Bi₂Se₃ с STM и детектированием спиновых корреляций"
+             width="800"
+             height="400"
+             loading="lazy">
+        <figcaption itemprop="caption">
+          Рис. 1. Экспериментальная схема и распределение вероятности совместного измерения спинов.
+          Цветовая шкала: красный — высокая корреляция (C &gt; 0.8), синий — антикорреляция.
+        </figcaption>
+      </figure>
+
+      <footer class="scientific-article__footer">
+        <p>
+          <strong>Журнал:</strong>
+          <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical">
+            <span itemprop="name">Fyrre Journal of Advanced Physics</span>
+          </span>,
+          Том 12, Выпуск 3
+        </p>
+
+        <p>
+          <strong>Страницы:</strong>
+          <span itemprop="pageStart">45</span>–<span itemprop="pageEnd">62</span>
+        </p>
+
+        <p>
+          <strong>DOI:</strong>
+          <a href="https://doi.org/10.5281/zenodo.1234567" itemprop="sameAs">
+            10.5281/zenodo.1234567
+          </a>
+        </p>
+
+        <p>
+          <strong>Язык:</strong>
+          <span itemprop="inLanguage">ru</span>
+        </p>
+
+        <p>
+          <strong>Доступ:</strong>
+          <span itemprop="isAccessibleForFree" content="true">
+            Бесплатный доступ
+          </span>
+        </p>
+      </footer>
+
+    </article>
+
+  </div>
+</section>
+
+
+  <!-- Sidebar (в данном макете не используется, но оставлен как требование) -->
+  <aside class="sidebar" aria-label="Дополнительная информация">
+    <!-- В данном шаблоне боковая панель отсутствует на макете, но если в будущем добавится — здесь будет размещаться -->
+    <div class="sidebar__placeholder">
+      <p>Боковая панель (если есть в макете)</p>
+    </div>
+  </aside>
+
+  <footer class="footer" itemprop="footer">
+    <div class="footer__container">
+      <div class="footer__brand">
+        <a href="/" class="footer__logo">
+          <span class="visually-hidden">Fyrre</span>
+          <svg width="80" height="20" viewBox="0 0 80 20" aria-hidden="true" focusable="false">
+            <rect width="80" height="20" fill="none"/>
+            <text x="0" y="16" font-family="sans-serif" font-size="16" fill="#666">gola</text>
+            <text x="40" y="16" font-family="sans-serif" font-size="16" fill="#999">templates</text>
+          </svg>
+        </a>
+      </div>
+
+<div itemscope itemtype="https://schema.org/Organization" class="visually-hidden">
+  <span itemprop="name">Fyrre Scientific Publishing</span>
+  <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+    <span itemprop="addressLocality">Moscow</span>
+    <span itemprop="addressRegion">Moscow Oblast</span>
+    <span itemprop="countryName">Russia</span>
+  </div>
+  <span itemprop="telephone">+7-495-123-45-67</span>
+  <span itemprop="email">info@fyrre.science</span>
+  <span itemprop="url">https://fyrre.science</span>
+  <span itemprop="sameAs">https://twitter.com/fyrrescience</span>
+  <span itemprop="sameAs">https://linkedin.com/company/fyrre-science</span>
+</div>
+
+      <div class="footer__links">
+        <a href="https://templates.gola.io" class="footer__link" target="_blank" rel="noopener noreferrer">
+          templates.gola.io
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" class="footer__link-icon">
+            <path d="M5 12l5-5 5 5"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
   <script src="js/script.js"></script>
 </body>
 </html>
