@@ -1,0 +1,122 @@
+/* === Footer === */
+.footer {
+  background: #111;
+  padding: var(--spacing-md);
+  margin-top: auto;
+}
+
+/* Мобильные устройства */
+@media (max-width: 767px) {
+  .footer {
+    padding: var(--spacing-sm);
+  }
+}
+
+/* Планшеты */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .footer {
+    padding: var(--spacing-md);
+  }
+}
+
+/* Десктоп */
+@media (min-width: 1025px) {
+  .footer {
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+}
+
+.footer__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+}
+
+/* Мобильные устройства */
+@media (max-width: 767px) {
+  .footer__container {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    text-align: center;
+  }
+}
+
+/* Планшеты */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .footer__container {
+    justify-content: center;
+    gap: var(--spacing-md);
+  }
+}
+
+.footer__brand {
+  display: flex;
+  align-items: center;
+}
+
+/* Мобильные устройства */
+@media (max-width: 767px) {
+  .footer__brand {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+.footer__logo svg {
+  display: block;
+}
+
+/* Мобильные устройства */
+@media (max-width: 767px) {
+  .footer__logo svg {
+    width: 60px;
+    height: auto;
+  }
+}
+
+.footer__links {
+  display: flex;
+  gap: var(--spacing-md);
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Мобильные устройства */
+@media (max-width: 767px) {
+  .footer__links {
+    width: 100%;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    flex-direction: column;
+  }
+}
+
+.footer__links p {
+  margin: 0;
+  font-weight: 600;
+}
+
+.footer__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--color-gray);
+  font-size: 0.9375rem;
+  transition: color 0.2s;
+}
+
+.footer__link:hover,
+.footer__link:focus {
+  color: var(--color-text);
+}
+
+/* Мобильные устройства */
+@media (max-width: 767px) {
+  .footer__link {
+    font-size: 0.875rem;
+  }
+}

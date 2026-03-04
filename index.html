@@ -1,21 +1,25 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Fyrre — современный журнал о науке и жизни.">
   <title>Fyrre — Magazine & Science</title>
-  <link rel="stylesheet" href="design/style.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/footer.css">
 </head>
 <body itemscope itemtype="https://schema.org/WebPage">
 
-  <!-- Skip link для доступности -->
+
   <a href="#main" class="skip-link" aria-label="Перейти к основному содержимому">Перейти к основному содержимому</a>
 
   <header class="header" itemprop="header">
     <div class="header__container">
       <div class="header__logo">
-        <a href="/" itemprop="url">
+        <a href="/" itemprop="url" data-nav="logo">
           <svg width="120" height="40" viewBox="0 0 120 40" aria-hidden="true" focusable="false">
             <rect width="120" height="40" fill="none"/>
             <text x="0" y="30" font-family="sans-serif" font-size="28" fill="#fff">FYRRE</text>
@@ -24,12 +28,13 @@
         </a>
       </div>
 
-      <nav class="nav" role="navigation" aria-label="Основное меню">
+      <nav class="nav" aria-label="Основное меню">
+        
         <ul class="nav__list">
-          <li class="nav__item"><a href="#" class="nav__link">Magazine</a></li>
-          <li class="nav__item"><a href="#" class="nav__link">Authors</a></li>
+          <li class="nav__item"><a href="#" class="nav__link" data-nav="magazine">Magazine</a></li>
+          <li class="nav__item"><a href="#" class="nav__link" data-nav="authors">Authors</a></li>
           <li class="nav__item">
-            <a href="#" class="nav__link nav__link--social" aria-label="Следите за нами в соцсетях">
+            <a href="#" class="nav__link nav__link--social" data-nav="social" aria-label="Следите за нами в соцсетях">
               <span class="visually-hidden">Социальные сети</span>
               <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
                 <circle cx="8" cy="8" r="8"/>
@@ -37,11 +42,23 @@
             </a>
           </li>
         </ul>
+
+        <div class="nav--mobile">
+          <a href="#" class="nav-mobile__link" data-nav="magazine">Magazine</a>
+          <a href="#" class="nav-mobile__link" data-nav="authors">Authors</a>
+          <a href="#" class="nav-mobile__link nav-mobile__link--social" data-nav="social">Social Media</a>
+        </div>
       </nav>
+
+      <button class="burger" aria-label="Меню навигации" aria-expanded="false">
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+      </button>
     </div>
   </header>
 
-  <!-- Hero-секция с макетом журнала -->
+
   <section class="hero" aria-labelledby="hero-title">
     <h1 id="hero-title" class="visually-hidden">Fyrre Magazine — Science & Life</h1>
     <div class="hero__container">
@@ -62,7 +79,7 @@
   </section>
 
   <main id="main" class="main" itemprop="mainContentOfPage">
-    <!-- Welcome -->
+
     <section class="welcome" aria-labelledby="welcome-heading">
       <div class="welcome__container">
         <h2 id="welcome-heading" class="welcome__heading">Welcome</h2>
@@ -72,12 +89,12 @@
       </div>
     </section>
 
-    <!-- Getting Started -->
+
     <section class="getting-started" aria-labelledby="getting-started-heading">
       <div class="getting-started__container">
         <h2 id="getting-started-heading" class="getting-started__heading">Getting started</h2>
 
-        <!-- Assets -->
+    
         <article class="assets" aria-labelledby="assets-heading">
           <h3 id="assets-heading" class="assets__heading">
             <span class="assets__icon">
@@ -91,49 +108,35 @@
           </h3>
           <div class="assets__body">
             <p>
-              This design is using assets from pages like Unsplash, Pexels or other assets under a free license. You may need to install fonts that aren’t available on Figma. You are free to use all assets mentioned on the licensing page for personal & commercial use.
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
             </p>
             <p>
               Check out the page below for all used assets.
             </p>
-            <a href="#" class="assets__link" aria-describedby="assets-heading">
-              See all assets
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" class="assets__link-icon">
-                <path d="M5 12l5-5 5 5"/>
               </svg>
             </a>
           </div>
         </article>
 
-        <!-- Get Webflow Template -->
+ 
         <article class="webflow-template" aria-labelledby="webflow-heading">
-          <h3 id="webflow-heading" class="webflow-template__heading">Get Webflow Template</h3>
+          <h3 id="webflow-heading" class="webflow-template__heading">Get Webflow Magazine</h3>
           <div class="webflow-template__card">
             <div class="webflow-template__icon">
               <img src="images/webflow-icon.svg" alt="Webflow логотип" width="48" height="48">
             </div>
             <div class="webflow-template__info">
-              <h4 class="webflow-template__title">Webflow science magazine Template</h4>
+              <h4 class="webflow-template__title">Webflow science magazine</h4>
               <p class="webflow-template__desc">Check out the science magazine.</p>
             </div>
             <div class="webflow-template__actions">
-              <a href="#" class="webflow-template__link webflow-template__link--preview" aria-label="Посмотреть живой просмотр шаблона">
-                Live Preview
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" class="webflow-template__link-icon">
-                  <path d="M5 12l5-5 5 5"/>
-                </svg>
               </a>
-              <a href="#" class="btn btn--primary webflow-template__link webflow-template__link--download" aria-label="Скачать шаблон Webflow science magazine">
-                Get Template
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" class="webflow-template__link-icon">
-                  <path d="M5 12l5-5 5 5"/>
-                </svg>
               </a>
             </div>
           </div>
         </article>
 
-        <!-- License -->
+     
         <article class="license" aria-labelledby="license-heading">
           <h3 id="license-heading" class="license__heading">
             <span class="license__icon">
@@ -147,7 +150,7 @@
           </h3>
           <div class="license__body">
             <p>
-              You can utilize this design in an unlimited number of projects, including commercial and personal projects like websites and apps. However, you are not permitted to resell the files, include them in a product or template that you are selling, publish them online, or distribute them for free.
+             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
             </p>
           </div>
         </article>
@@ -156,8 +159,9 @@
   </main>
 
 
-<!-- === Scientific Article Section === -->
-<section class="scientific-article-section" aria-labelledby="article-title">
+
+<section class="scientific-article-section" id="authors-section" aria-labelledby="article-title">
+  <h2 class="visually-hidden">Scientific articles</h2>
   <div class="scientific-article-wrapper">
 
     <article class="scientific-article__card"
@@ -264,9 +268,8 @@
 </section>
 
 
-  <!-- Sidebar (в данном макете не используется, но оставлен как требование) -->
+
   <aside class="sidebar" aria-label="Дополнительная информация">
-    <!-- В данном шаблоне боковая панель отсутствует на макете, но если в будущем добавится — здесь будет размещаться -->
     <div class="sidebar__placeholder">
       <p>Боковая панель (если есть в макете)</p>
     </div>
@@ -279,8 +282,7 @@
           <span class="visually-hidden">Fyrre</span>
           <svg width="80" height="20" viewBox="0 0 80 20" aria-hidden="true" focusable="false">
             <rect width="80" height="20" fill="none"/>
-            <text x="0" y="16" font-family="sans-serif" font-size="16" fill="#666">gola</text>
-            <text x="40" y="16" font-family="sans-serif" font-size="16" fill="#999">templates</text>
+            <text x="0" y="16" font-family="sans-serif" font-size="16" fill="#666">Science</text>
           </svg>
         </a>
       </div>
@@ -300,12 +302,9 @@
 </div>
 
       <div class="footer__links">
-        <a href="https://templates.gola.io" class="footer__link" target="_blank" rel="noopener noreferrer">
-          templates.gola.io
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" class="footer__link-icon">
-            <path d="M5 12l5-5 5 5"/>
-          </svg>
-        </a>
+        <p>
+          FYRRE
+        </p>
       </div>
     </div>
   </footer>

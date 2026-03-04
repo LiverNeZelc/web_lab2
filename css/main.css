@@ -1,0 +1,496 @@
+/* === Hero === */
+.hero {
+  padding: var(--spacing-lg) var(--spacing-md);
+  background: var(--color-bg);
+}
+
+.hero__container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-md);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Мобильные устройства */
+@media (max-width: 767px) {
+  .hero {
+    padding: var(--spacing-md) var(--spacing-sm);
+  }
+
+  .hero__container {
+    gap: var(--spacing-sm);
+  }
+
+  .hero__figure img {
+    max-width: 100%;
+  }
+
+  .hero__title {
+    font-size: 2.5rem;
+  }
+
+  .hero__tag {
+    font-size: 0.75rem;
+  }
+
+  .hero__subtitle {
+    font-size: 1rem;
+  }
+}
+
+/* Планшеты */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .hero {
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+
+  .hero__container {
+    gap: var(--spacing-lg);
+  }
+
+  .hero__title {
+    font-size: 3rem;
+  }
+}
+
+/* Десктоп */
+@media (min-width: 1025px) {
+  .hero {
+    padding: var(--spacing-xl) var(--spacing-md) var(--spacing-lg);
+  }
+
+  .hero__container {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: var(--spacing-lg);
+  }
+
+  .hero__title {
+    font-size: var(--font-size-h1);
+  }
+}
+
+.hero__preview {
+  justify-self: center;
+}
+
+.hero__figure img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: var(--border-radius);
+}
+
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.hero__tag {
+  color: var(--color-accent);
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+}
+
+.hero__title {
+  font-size: var(--font-size-h1);
+  margin: 0;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.hero__subtitle {
+  font-size: var(--font-size-body);
+  opacity: 0.8;
+  margin: 0;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  transition: background 0.2s;
+  cursor: pointer;
+  border: none;
+}
+
+.btn--primary {
+  background: var(--color-accent);
+  color: #000;
+}
+
+.btn--primary:hover,
+.btn--primary:focus {
+  background: #ff5252;
+}
+
+/* === Main Content === */
+.main {
+  padding: 0 var(--spacing-md) var(--spacing-xl);
+}
+
+/* Мобильные устройства */
+@media (max-width: 767px) {
+  .main {
+    padding: 0 var(--spacing-sm) var(--spacing-md);
+  }
+}
+
+/* Планшеты и десктоп */
+@media (min-width: 768px) {
+  .main {
+    padding: 0 var(--spacing-md) var(--spacing-xl);
+  }
+}
+
+.welcome,
+.getting-started {
+  margin: 0 auto var(--spacing-xl);
+  padding: 0 var(--spacing-md);
+}
+
+.welcome {
+  max-width: 800px;
+}
+
+.getting-started {
+  max-width: 1200px;
+}
+
+/* Мобильные устройства */
+@media (max-width: 767px) {
+  .welcome,
+  .getting-started {
+    padding: 0 var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+  }
+}
+
+/* === Grid для article blocks === */
+.getting-started__container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-lg);
+  max-width: 100%;
+}
+
+/* Планшеты и выше: 2 колонки */
+@media (min-width: 768px) {
+  .getting-started__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Заголовок занимает всю ширину */
+.getting-started__heading {
+  grid-column: 1 / -1;
+}
+
+.welcome__heading,
+.getting-started__heading {
+  font-size: var(--font-size-h2);
+  margin: 0 0 var(--spacing-md);
+  font-weight: 800;
+}
+
+/* Мобильные устройства */
+@media (max-width: 767px) {
+  .welcome__heading,
+  .getting-started__heading {
+    font-size: 1.75rem;
+  }
+}
+
+.welcome__text {
+  font-size: var(--font-size-body);
+  opacity: 0.9;
+  line-height: 1.8;
+}
+
+/* Мобильные устройства */
+@media (max-width: 767px) {
+  .welcome__text {
+    font-size: 1rem;
+  }
+}
+
+/* === Article blocks === */
+.assets,
+.webflow-template,
+.license {
+  margin-bottom: var(--spacing-lg);
+  padding: var(--spacing-md);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--border-radius);
+}
+
+/* Мобильные устройства */
+@media (max-width: 767px) {
+  .assets,
+  .webflow-template,
+  .license {
+    padding: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+  }
+}
+
+.assets__heading,
+.webflow-template__heading,
+.license__heading {
+  font-size: var(--font-size-h3);
+  margin: 0 0 var(--spacing-sm);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  flex-wrap: wrap;
+}
+
+/* Мобильные устройства */
+@media (max-width: 767px) {
+  .assets__heading,
+  .webflow-template__heading,
+  .license__heading {
+    font-size: 1.25rem;
+  }
+}
+
+.assets__icon,
+.license__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.assets__body,
+.license__body {
+  font-size: var(--font-size-body);
+  opacity: 0.85;
+  line-height: 1.7;
+}
+
+/* Мобильные устройства */
+@media (max-width: 767px) {
+  .assets__body,
+  .license__body {
+    font-size: 1rem;
+  }
+}
+
+.assets__link,
+.webflow-template__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: var(--spacing-sm);
+  font-weight: 600;
+  color: var(--color-accent);
+  cursor: pointer;
+}
+
+/* Webflow Template Card */
+.webflow-template__card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+/* Планшеты и выше */
+@media (min-width: 768px) {
+  .webflow-template__card {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--spacing-md);
+  }
+}
+
+.webflow-template__icon {
+  flex-shrink: 0;
+}
+
+.webflow-template__info {
+  flex-grow: 1;
+}
+
+.webflow-template__title {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+/* Мобильные устройства */
+@media (max-width: 767px) {
+  .webflow-template__title {
+    font-size: 1.1rem;
+  }
+}
+
+.webflow-template__desc {
+  margin: 0;
+  opacity: 0.8;
+  font-size: 1rem;
+}
+
+.webflow-template__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-sm);
+}
+
+.webflow-template__link--preview {
+  color: var(--color-gray);
+}
+
+/* === Sidebar (placeholder) === */
+.sidebar {
+  display: none; /* не используется в макете */
+}
+
+/* === Scientific Article Section === */
+.scientific-article-section {
+  padding: 0 var(--spacing-md) var(--spacing-xl);
+}
+
+/* Мобильные устройства */
+@media (max-width: 767px) {
+  .scientific-article-section {
+    padding: 0 var(--spacing-sm) var(--spacing-md);
+  }
+}
+
+.scientific-article-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Карточка статьи */
+.scientific-article__card {
+  padding: var(--spacing-md);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--border-radius);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+/* Мобильные устройства */
+@media (max-width: 767px) {
+  .scientific-article__card {
+    padding: var(--spacing-sm);
+  }
+}
+
+/* Header */
+.scientific-article__header {
+  margin-bottom: var(--spacing-md);
+}
+
+.scientific-article__title {
+  font-size: var(--font-size-h2);
+  font-weight: 800;
+  margin: 0 0 var(--spacing-sm);
+  line-height: 1.2;
+}
+
+/* Мобильные устройства */
+@media (max-width: 767px) {
+  .scientific-article__title {
+    font-size: 1.5rem;
+  }
+}
+
+/* Планшеты */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .scientific-article__title {
+    font-size: 2rem;
+  }
+}
+
+.scientific-article__meta {
+  font-size: 0.95rem;
+  color: var(--color-gray);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* Мобильные устройства */
+@media (max-width: 767px) {
+  .scientific-article__meta {
+    font-size: 0.85rem;
+  }
+}
+
+/* Body */
+.scientific-article__body h3 {
+  font-size: var(--font-size-h3);
+  margin: var(--spacing-md) 0 var(--spacing-sm);
+  font-weight: 700;
+}
+
+/* Мобильные устройства */
+@media (max-width: 767px) {
+  .scientific-article__body h3 {
+    font-size: 1.25rem;
+    margin: var(--spacing-sm) 0 0.5rem;
+  }
+}
+
+.scientific-article__body p {
+  opacity: 0.9;
+  line-height: 1.8;
+}
+
+/* Мобильные устройства */
+@media (max-width: 767px) {
+  .scientific-article__body p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+}
+
+/* Figure */
+.scientific-article__figure {
+  margin: var(--spacing-md) 0;
+}
+
+.scientific-article__figure img {
+  width: 100%;
+  border-radius: var(--border-radius);
+}
+
+.scientific-article__figure figcaption {
+  font-size: 0.9rem;
+  color: var(--color-gray);
+  margin-top: var(--spacing-xs);
+}
+
+/* Мобильные устройства */
+@media (max-width: 767px) {
+  .scientific-article__figure figcaption {
+    font-size: 0.8rem;
+  }
+}
+
+/* Footer */
+.scientific-article__footer {
+  margin-top: var(--spacing-md);
+  padding-top: var(--spacing-sm);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.95rem;
+  color: var(--color-gray);
+}
+
+/* Мобильные устройства */
+@media (max-width: 767px) {
+  .scientific-article__footer {
+    font-size: 0.85rem;
+  }
+}
