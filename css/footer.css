@@ -104,6 +104,25 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
+}
+
+/* === SVG Стили === */
+.footer__logo-svg {
+  width: 80px;
+  height: 20px;
+  display: block;
+}
+
+.footer__logo-svg rect {
+  width: 80;
+  height: 20;
+}
+
+.footer__logo-text {
+  font-family: sans-serif;
+  font-size: 16px;
+  fill: #666;
+}
   color: var(--color-gray);
   font-size: 0.9375rem;
   transition: color 0.2s;

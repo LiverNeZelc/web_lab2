@@ -22,14 +22,6 @@
     gap: var(--spacing-sm);
   }
 
-  .hero__figure img {
-    max-width: 100%;
-  }
-
-  .hero__title {
-    font-size: 2.5rem;
-  }
-
   .hero__tag {
     font-size: 0.75rem;
   }
@@ -73,6 +65,14 @@
 
 .hero__preview {
   justify-self: center;
+}
+
+.hero__image {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  display: block;
 }
 
 .hero__figure img {
@@ -419,6 +419,25 @@
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+}
+
+/* === SVG Стили для иконок === */
+.assets__svg,
+.license__svg {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+}
+
+/* SVG элементы геометрия */
+.assets__circle,
+.license__circle {
+  cx: 12;
+  cy: 12;
+  r: 10;
+}
 }
 
 /* Мобильные устройства */

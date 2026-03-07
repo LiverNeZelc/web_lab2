@@ -20,10 +20,10 @@
     <div class="header__container">
       <div class="header__logo">
         <a href="/" itemprop="url" data-nav="logo">
-          <svg width="120" height="40" viewBox="0 0 120 40" aria-hidden="true" focusable="false">
-            <rect width="120" height="40" fill="none"/>
-            <text x="0" y="30" font-family="sans-serif" font-size="28" fill="#fff">FYRRE</text>
-          </svg>
+         
+            <rect fill="none"/>
+            <text class="header__logo-text">FYRRE</text>
+       
           <span class="visually-hidden">Fyrre — Magazine & Science</span>
         </a>
       </div>
@@ -36,8 +36,8 @@
           <li class="nav__item">
             <a href="#" class="nav__link nav__link--social" data-nav="social" aria-label="Следите за нами в соцсетях">
               <span class="visually-hidden">Социальные сети</span>
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
-                <circle cx="8" cy="8" r="8"/>
+              <svg class="nav__social-icon" >
+                <circle class="nav__social-circle"/>
               </svg>
             </a>
           </li>
@@ -64,8 +64,7 @@
     <div class="hero__container">
       <div class="hero__preview">
         <figure class="hero__figure">
-          <img src="images/hero-magazine.jpg" alt="Обложка журнала Fyrre: «Science & LIFE»" 
-               width="600" height="800" loading="lazy">
+          <img class="hero__image" src="images/hero-magazine.jpg" alt="Обложка журнала Fyrre: «Science & LIFE»" loading="lazy">
           <figcaption class="visually-hidden">Обложка номера журнала Fyrre Science за март 2025 г.</figcaption>
         </figure>
       </div>
@@ -98,8 +97,8 @@
         <article class="assets" aria-labelledby="assets-heading">
           <h3 id="assets-heading" class="assets__heading">
             <span class="assets__icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="12" cy="12" r="10"/>
+              <svg class="assets__svg">
+                <circle class="assets__circle"/>
                 <path d="M12 16v-4"/>
                 <path d="M12 12v-4"/>
               </svg>
@@ -113,8 +112,8 @@
             <p>
               Check out the page below for all used assets.
             </p>
-              </svg>
-            </a>
+             
+          
           </div>
         </article>
 
@@ -123,15 +122,15 @@
           <h3 id="webflow-heading" class="webflow-template__heading">Get Webflow Magazine</h3>
           <div class="webflow-template__card">
             <div class="webflow-template__icon">
-              <img src="images/webflow-icon.svg" alt="Webflow логотип" width="48" height="48">
+              <img src="images/webflow-icon.svg" alt="Webflow логотип">
             </div>
             <div class="webflow-template__info">
               <h4 class="webflow-template__title">Webflow science magazine</h4>
               <p class="webflow-template__desc">Check out the science magazine.</p>
             </div>
             <div class="webflow-template__actions">
-              </a>
-              </a>
+           
+             
             </div>
           </div>
         </article>
@@ -140,8 +139,8 @@
         <article class="license" aria-labelledby="license-heading">
           <h3 id="license-heading" class="license__heading">
             <span class="license__icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="12" cy="12" r="10"/>
+              <svg class="license__svg">
+                <circle class="license__circle"/>
                 <path d="M12 16v-4"/>
                 <path d="M12 12v-4"/>
               </svg>
@@ -217,10 +216,8 @@
               itemprop="image"
               itemscope
               itemtype="https://schema.org/ImageObject">
-        <img src="images/part.jpg"
+        <img class="scientific-article__image" src="images/part.jpg"
              alt="Схема экспериментальной установки: топологический изолятор Bi₂Se₃ с STM и детектированием спиновых корреляций"
-             width="800"
-             height="400"
              loading="lazy">
         <figcaption itemprop="caption">
           Рис. 1. Экспериментальная схема и распределение вероятности совместного измерения спинов.
@@ -280,9 +277,7 @@
       <div class="footer__brand">
         <a href="/" class="footer__logo">
           <span class="visually-hidden">Fyrre</span>
-          <svg width="80" height="20" viewBox="0 0 80 20" aria-hidden="true" focusable="false">
-            <rect width="80" height="20" fill="none"/>
-            <text x="0" y="16" font-family="sans-serif" font-size="16" fill="#666">Science</text>
+         Science
           </svg>
         </a>
       </div>
@@ -294,11 +289,11 @@
     <span itemprop="addressRegion">Moscow Oblast</span>
     <span itemprop="countryName">Russia</span>
   </div>
-  <span itemprop="telephone">+7-495-123-45-67</span>
-  <span itemprop="email">info@fyrre.science</span>
-  <span itemprop="url">https://fyrre.science</span>
-  <span itemprop="sameAs">https://twitter.com/fyrrescience</span>
-  <span itemprop="sameAs">https://linkedin.com/company/fyrre-science</span>
+  <a href="tel:+74951234567" itemprop="telephone">+7-495-123-45-67</a>
+  <a href="mailto:info@fyrre.science" itemprop="email">info@fyrre.science</a>
+  <a href="https://fyrre.science" itemprop="url">https://fyrre.science</a>
+  <a href="https://twitter.com/fyrrescience" itemprop="sameAs">https://twitter.com/fyrrescience</a>
+  <a href="https://linkedin.com/company/fyrre-science" itemprop="sameAs">https://linkedin.com/company/fyrre-science</a>
 </div>
 
       <div class="footer__links">

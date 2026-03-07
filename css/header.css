@@ -15,9 +15,7 @@
   margin: 0 auto;
 }
 
-.header__logo svg {
-  display: block;
-}
+
 
 /* === Бургер-меню === */
 .burger {
@@ -137,6 +135,37 @@
   .nav__list {
     display: none;
   }
+}
+
+/* === SVG Стили === */
+.header__logo-svg {
+  width: 120px;
+  height: 40px;
+  display: block;
+}
+
+.header__logo-svg rect {
+  width: 120;
+  height: 40;
+}
+
+.header__logo-text {
+  font-family: sans-serif;
+  font-size: 28px;
+  fill: #fff;
+}
+
+.nav__social-icon {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+.nav__social-circle {
+  cx: 8;
+  cy: 8;
+  r: 8;
+}
 
   .nav--mobile {
     width: 100%;
