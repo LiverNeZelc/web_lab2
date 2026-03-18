@@ -130,7 +130,7 @@
   background: #ff5252;
 }
 
-/* === Main Content === */
+
 .main {
   padding: 0 var(--spacing-md) var(--spacing-xl);
 }
@@ -172,7 +172,7 @@
   }
 }
 
-/* === Grid для article blocks === */
+/* Grid  */
 .getting-started__container {
   display: grid;
   grid-template-columns: 1fr;
@@ -180,14 +180,14 @@
   max-width: 100%;
 }
 
-/* Планшеты и выше: 2 колонки */
+
 @media (min-width: 768px) {
   .getting-started__container {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* Заголовок занимает всю ширину */
+
 .getting-started__heading {
   grid-column: 1 / -1;
 }
@@ -220,7 +220,7 @@
   }
 }
 
-/* === Article blocks === */
+/* Блоки статей */
 .assets,
 .webflow-template,
 .license {
@@ -350,9 +350,9 @@
   color: var(--color-gray);
 }
 
-/* === Sidebar (placeholder) === */
+
 .sidebar {
-  display: none; /* не используется в макете */
+  display: none; 
 }
 
 /* === Scientific Article Section === */

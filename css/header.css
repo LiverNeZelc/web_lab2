@@ -1,4 +1,4 @@
-/* === Header === */
+
 .header {
   background-color: var(--color-bg);
   padding: var(--spacing-sm) var(--spacing-md);
@@ -17,7 +17,7 @@
 
 
 
-/* === Бургер-меню === */
+
 .burger {
   display: none;
   flex-direction: column;
@@ -116,7 +116,7 @@
   opacity: 1;
 }
 
-/* === Мобильные устройства (до 768px) === */
+/* Мобильные устройства */
 @media (max-width: 767px) {
   .header__container {
     flex-wrap: wrap;
@@ -137,7 +137,7 @@
   }
 }
 
-/* === SVG Стили === */
+
 .header__logo-svg {
   width: 120px;
   height: 40px;
@@ -172,7 +172,7 @@
   }
 
 
-/* === Планшеты (768px - 1024px) === */
+/* Планшеты */
 @media (min-width: 768px) and (max-width: 1024px) {
   .header__container {
     gap: var(--spacing-md);
@@ -183,7 +183,7 @@
   }
 }
 
-/* === Десктоп (1025px и выше) === */
+/* Десктоп */
 @media (min-width: 1025px) {
   .header__container {
     gap: var(--spacing-lg);
