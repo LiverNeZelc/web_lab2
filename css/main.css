@@ -1,4 +1,4 @@
-/* === Hero === */
+
 .hero {
   padding: var(--spacing-lg) var(--spacing-md);
   background: var(--color-bg);
@@ -12,7 +12,7 @@
   margin: 0 auto;
 }
 
-/* Мобильные устройства */
+
 @media (max-width: 767px) {
   .hero {
     padding: var(--spacing-md) var(--spacing-sm);
@@ -437,7 +437,6 @@
   cx: 12;
   cy: 12;
   r: 10;
-}
 }
 
 /* Мобильные устройства */
