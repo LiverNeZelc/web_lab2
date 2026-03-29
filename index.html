@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/features.css">
 </head>
 <body itemscope itemtype="https://schema.org/WebPage">
 
@@ -34,19 +35,19 @@
           <li class="nav__item"><a href="#" class="nav__link" data-nav="magazine">Magazine</a></li>
           <li class="nav__item"><a href="#" class="nav__link" data-nav="authors">Authors</a></li>
           <li class="nav__item">
-            <a href="#" class="nav__link nav__link--social" data-nav="social" aria-label="Следите за нами в соцсетях">
-              <span class="visually-hidden">Социальные сети</span>
+            <button class="nav__link nav__link--social" data-open-auth aria-label="Авторизация">
+              <span class="visually-hidden">Авторизация</span>
               <svg class="nav__social-icon" >
                 <circle class="nav__social-circle"/>
               </svg>
-            </a>
+            </button>
           </li>
         </ul>
 
         <div class="nav--mobile">
           <a href="#" class="nav-mobile__link" data-nav="magazine">Magazine</a>
           <a href="#" class="nav-mobile__link" data-nav="authors">Authors</a>
-          <a href="#" class="nav-mobile__link nav-mobile__link--social" data-nav="social">Social Media</a>
+          <a href="#" class="nav-mobile__link" data-open-auth>Login</a>
         </div>
       </nav>
 
@@ -255,10 +256,187 @@
 
     </article>
 
+    <article class="scientific-article__card"
+             itemscope
+             itemtype="https://schema.org/ScholarlyArticle">
+
+      <header class="scientific-article__header">
+        <span class="scientific-article__tag">Scientific Article</span>
+
+        <h2 class="scientific-article__title"
+            itemprop="headline">
+          Синтез и характеризация графеновых нанокомпозитов для биомедицинских приложений
+        </h2>
+
+        <div class="scientific-article__meta">
+          <time datetime="2025-02-15" itemprop="datePublished">
+            15 февраля 2025 г.
+          </time>
+
+          <span class="scientific-article__separator">•</span>
+
+          <span itemprop="author"
+                itemscope
+                itemtype="https://schema.org/Person">
+            <span itemprop="name">Мария В. Петрова</span>
+          </span>
+        </div>
+      </header>
+
+      <div class="scientific-article__body" itemprop="articleBody">
+        <h3>Аннотация</h3>
+        <p itemprop="abstract">
+          Исследование синтеза новых графеновых нанокомпозитов с использованием химического осаждения из газовой фазы. Полученные материалы показывают повышенную биосовместимость и перспективны для применения в тканевой инженерии. Проведен анализ структурных свойств методами электронной микроскопии и спектроскопии комбинационного рассеяния света.
+        </p>
+
+        <h3>Ключевые слова</h3>
+        <div class="scientific-article__keywords">
+          <span itemprop="keywords">графеновые нанокомпозиты</span>
+          <span itemprop="keywords">биосовместимость</span>
+          <span itemprop="keywords">нанотехнология</span>
+        </div>
+      </div>
+
+      <footer class="scientific-article__footer">
+        <p>
+          <strong>Журнал:</strong>
+          <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical">
+            <span itemprop="name">Fyrre Journal of Nanoscience</span>
+          </span>,
+          Том 8, Выпуск 2
+        </p>
+
+        <p>
+          <strong>Страницы:</strong>
+          <span itemprop="pageStart">123</span>–<span itemprop="pageEnd">145</span>
+        </p>
+
+        <p>
+          <strong>Язык:</strong>
+          <span itemprop="inLanguage">ru</span>
+        </p>
+
+        <p>
+          <strong>Доступ:</strong>
+          <span itemprop="isAccessibleForFree" content="true">
+            Бесплатный доступ
+          </span>
+        </p>
+      </footer>
+
+    </article>
+
+    <article class="scientific-article__card"
+             itemscope
+             itemtype="https://schema.org/ScholarlyArticle">
+
+      <header class="scientific-article__header">
+        <span class="scientific-article__tag">Scientific Article</span>
+
+        <h2 class="scientific-article__title"
+            itemprop="headline">
+          Климатические изменения и адаптация биологических систем в Арктике
+        </h2>
+
+        <div class="scientific-article__meta">
+          <time datetime="2025-03-01" itemprop="datePublished">
+            1 марта 2025 г.
+          </time>
+
+          <span class="scientific-article__separator">•</span>
+
+          <span itemprop="author"
+                itemscope
+                itemtype="https://schema.org/Person">
+            <span itemprop="name">Алексей Н. Соколов</span>
+          </span>
+        </div>
+      </header>
+
+      <div class="scientific-article__body" itemprop="articleBody">
+        <h3>Аннотация</h3>
+        <p itemprop="abstract">
+          Комплексное исследование влияния климатических изменений на арктические экосистемы. Анализ многолетних наблюдений показывает ускоренное потепление и его воздействие на миграционные паттерны млекопитающих. Предложены механизмы адаптации для сохранения биоразнообразия в условиях меняющегося климата.
+        </p>
+
+        <h3>Ключевые слова</h3>
+        <div class="scientific-article__keywords">
+          <span itemprop="keywords">климатические изменения</span>
+          <span itemprop="keywords">Арктика</span>
+          <span itemprop="keywords">биологическая адаптация</span>
+          <span itemprop="keywords">экология</span>
+        </div>
+      </div>
+
+      <footer class="scientific-article__footer">
+        <p>
+          <strong>Журнал:</strong>
+          <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical">
+            <span itemprop="name">Fyrre Journal of Environmental Science</span>
+          </span>,
+          Том 5, Выпуск 1
+        </p>
+
+        <p>
+          <strong>Страницы:</strong>
+          <span itemprop="pageStart">78</span>–<span itemprop="pageEnd">96</span>
+        </p>
+
+        <p>
+          <strong>Язык:</strong>
+          <span itemprop="inLanguage">ru</span>
+        </p>
+
+        <p>
+          <strong>Доступ:</strong>
+          <span itemprop="isAccessibleForFree" content="true">
+            Бесплатный доступ
+          </span>
+        </p>
+      </footer>
+
+    </article>
+
   </div>
 </section>
 
+  <!-- === Модальное окно авторизации === -->
+  <div id="auth-modal" class="modal">
+    <div class="modal__content">
+      <button class="modal__close" aria-label="Закрыть">&times;</button>
+      
+      <div class="modal__header">
+        <h2>Вход в систему</h2>
+        <p>Введите ваши учётные данные</p>
+      </div>
 
+      <form id="auth-form" class="modal__form">
+        <div class="form__group">
+          <label for="email">Email:</label>
+          <input 
+            type="email" 
+            id="email" 
+            name="email" 
+            placeholder="your@email.com"
+            required
+          >
+        </div>
+
+        <div class="form__group">
+          <label for="password">Пароль:</label>
+          <input 
+            type="password" 
+            id="password" 
+            name="password" 
+            placeholder="••••••••"
+            required
+          >
+        </div>
+
+        <button type="submit" class="modal__submit">Войти</button>
+      </form>
+    </div>
+  </div>
 
   <aside class="sidebar" aria-label="Дополнительная информация">
     <div class="sidebar__placeholder">
@@ -297,6 +475,9 @@
       </div>
     </div>
   </footer>
+  <script src="js/utils/readingProgress.js"></script>
+  <script src="js/utils/citations.js"></script>
+  <script src="js/components/modal.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>

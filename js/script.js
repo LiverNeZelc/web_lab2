@@ -1,4 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // Инициализируем все модули
+  initReadingProgress();
+  initCitations();
+  initAuthModal();
+
   const heading = document.querySelector('h1');
   
   heading.style.opacity = '0';
@@ -8,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     heading.style.opacity = '1';
   }, 300);
   
-  console.log('Добро пожаловать в ScienceJournal!');
+  console.log('Добро пожаловать в Fyrre!');
 
   // === Бургер-меню ===
   const burger = document.querySelector('.burger');
