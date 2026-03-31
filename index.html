@@ -42,6 +42,11 @@
               </svg>
             </button>
           </li>
+          <li class="nav__item nav__item--mobile-bookmarks">
+            <button class="nav__link nav__link--bookmarks" id="mobile-bookmarks-toggle" aria-label="Открыть закладки" title="Закладки">
+              ⭐
+            </button>
+          </li>
         </ul>
 
         <div class="nav--mobile">
@@ -158,13 +163,12 @@
     </section>
   </main>
 
-
-
 <section class="scientific-article-section" id="authors-section" aria-labelledby="article-title">
   <h2 class="visually-hidden">Scientific articles</h2>
   <div class="scientific-article-wrapper">
 
     <article class="scientific-article__card"
+             data-article-id="article_quantum_insulators"
              itemscope
              itemtype="https://schema.org/ScholarlyArticle">
 
@@ -257,6 +261,7 @@
     </article>
 
     <article class="scientific-article__card"
+             data-article-id="article_graphene_composites"
              itemscope
              itemtype="https://schema.org/ScholarlyArticle">
 
@@ -327,6 +332,7 @@
     </article>
 
     <article class="scientific-article__card"
+             data-article-id="article_arctic_climate"
              itemscope
              itemtype="https://schema.org/ScholarlyArticle">
 
@@ -418,6 +424,7 @@
             id="email" 
             name="email" 
             placeholder="your@email.com"
+            autocomplete="email"
             required
           >
         </div>
@@ -429,6 +436,7 @@
             id="password" 
             name="password" 
             placeholder="••••••••"
+            autocomplete="current-password"
             required
           >
         </div>
@@ -438,9 +446,15 @@
     </div>
   </div>
 
-  <aside class="sidebar" aria-label="Дополнительная информация">
-    <div class="sidebar__placeholder">
-      <p>Боковая панель (если есть в макете)</p>
+  <aside class="sidebar bookmarks-sidebar" aria-label="Мои закладки">
+    <div class="sidebar__header">
+      <h3 class="sidebar__title">⭐ Закладки <span class="bookmarks-badge" id="bookmarks-badge">0</span></h3>
+      <button class="sidebar__toggle" id="sidebar-toggle" aria-label="Свернуть/развернуть" title="Свернуть">
+        ✕
+      </button>
+    </div>
+    <div class="sidebar__content" id="bookmarks-sidebar-list">
+      <p class="sidebar__empty">Нет сохраненных статей</p>
     </div>
   </aside>
 
@@ -475,9 +489,19 @@
       </div>
     </div>
   </footer>
+  <!-- API и Storage сервисы -->
+  <script src="js/api/config.js"></script>
+  <script src="js/api/apiService.js"></script>
+  <script src="js/storage/localStorage.js"></script>
+  <script src="js/storage/sessionStorage.js"></script>
+  <script src="js/utils/dataParser.js"></script>
+  <!-- Модули приложения -->
   <script src="js/utils/readingProgress.js"></script>
   <script src="js/utils/citations.js"></script>
   <script src="js/components/modal.js"></script>
+  <!-- Основной скрипт (должен быть последним перед тестами) -->
   <script src="js/script.js"></script>
+  <!-- Тесты (загружаются после всего) -->
+  <script src="js/utils/tests.js"></script>
 </body>
 </html>
