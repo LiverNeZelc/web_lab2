@@ -601,17 +601,7 @@
 
 /* === СКРЫТИЕ БОКОВОЙ ПАНЕЛИ === */
 .bookmarks-sidebar.collapsed {
-  width: 50px;
-  right: 0;
-}
-
-.bookmarks-sidebar.collapsed .sidebar__content,
-.bookmarks-sidebar.collapsed .sidebar__title {
-  display: none;
-}
-
-.bookmarks-sidebar.collapsed .bookmarks-badge {
-  display: flex;
+  display: none !important;
 }
 
 /* === АДАПТИВНОСТЬ === */
@@ -650,6 +640,27 @@
   }
 }
 
+/* === КНОПКА ЗАКЛАДОК В НАВИГАЦИИ (ДЕСКТОП) === */
+.nav__item--bookmarks-toggle {
+  display: block;
+}
+
+.nav__link--bookmarks-toggle {
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  background: transparent;
+  border: none;
+  color: var(--color-accent);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.nav__link--bookmarks-toggle:hover {
+  transform: scale(1.1);
+}
+
 /* === КНОПКА ЗАКЛАДОК В НАВИГАЦИИ (МОБИЛЬНАЯ) === */
 .nav__item--mobile-bookmarks {
   display: none;
@@ -672,5 +683,9 @@
 
   .nav__link--bookmarks:hover {
     transform: scale(1.1);
+  }
+
+  .nav__item--bookmarks-toggle {
+    display: none;
   }
 }

@@ -1,6 +1,6 @@
-// Система цитирования статей
+
 const initCitations = () => {
-  // Добавляем кнопку цитирования к каждой статье
+  // кнопки цитирования к каждой статье
   document.querySelectorAll('.scientific-article__card').forEach(article => {
     const footer = article.querySelector('.scientific-article__footer');
     if (footer) {

@@ -56,6 +56,281 @@ ul {
   padding: 0 !important;
   margin: -1px !important;
   overflow: hidden !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* === ПОИСК В ARXIV === */
+.sidebar__search {
+  padding: 12px;
+  border-bottom: 1px solid var(--color-border, #e0e0e0);
+}
+
+.search-form__group {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.search-form__input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid var(--color-border, #e0e0e0);
+  border-radius: 4px;
+  font-size: 13px;
+  font-family: inherit;
+  background-color: var(--color-bg, #fff);
+  color: var(--color-text, #000);
+}
+
+.search-form__input:focus {
+  outline: none;
+  border-color: var(--color-accent, #4a90e2);
+  box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.1);
+}
+
+.search-form__btn {
+  padding: 8px 12px;
+  background-color: var(--color-accent, #4a90e2);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.search-form__btn:hover {
+  background-color: var(--color-accent-dark, #2e5c8a);
+}
+
+.search-form__status {
+  font-size: 12px;
+  padding: 4px 0;
+  min-height: 18px;
+}
+
+/* === РЕЗУЛЬТАТЫ ПОИСКА === */
+.sidebar__subtitle {
+  font-size: 13px;
+  font-weight: 600;
+  margin: 12px 0 8px 0;
+  padding: 0 12px;
+  color: var(--color-text, #000);
+}
+
+.sidebar__results {
+  max-height: 60vh;
+  overflow-y: auto;
+  padding: 8px;
+}
+
+.search-result-item {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid var(--color-border, #e0e0e0);
+  border-radius: 6px;
+  background-color: var(--color-bg-light, #f9f9f9);
+  transition: all 0.2s;
+}
+
+.search-result-item:hover {
+  border-color: var(--color-accent, #4a90e2);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.search-result-item__header {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 6px;
+  align-items: flex-start;
+}
+
+.search-result-item__title {
+  flex: 1;
+  font-size: 13px;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+.search-result-item__bookmark-btn {
+  flex-shrink: 0;
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 0;
+  transition: transform 0.2s;
+}
+
+.search-result-item__bookmark-btn:hover {
+  transform: scale(1.2);
+}
+
+.search-result-item__bookmark-btn.bookmarked {
+  color: #ffd700;
+}
+
+.search-result-item__authors {
+  font-size: 12px;
+  color: var(--color-text-secondary, #666);
+  margin-bottom: 4px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.search-result-item__date {
+  font-size: 11px;
+  color: var(--color-text-tertiary, #999);
+  margin-bottom: 6px;
+}
+
+.search-result-item__summary {
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--color-text-secondary, #666);
+  margin-bottom: 8px;
+  max-height: 60px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.search-result-item__actions {
+  display: flex;
+  gap: 6px;
+}
+
+.search-result-item__action {
+  flex: 1;
+  padding: 6px 8px;
+  font-size: 11px;
+  border: 1px solid var(--color-border, #e0e0e0);
+  background-color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.search-result-item__action:hover {
+  background-color: var(--color-accent, #4a90e2);
+  color: white;
+  border-color: var(--color-accent, #4a90e2);
+}
+
+.search-result-item__action.cited {
+  background-color: #51cf66;
+  border-color: #51cf66;
+  color: white;
+}
+
+.sidebar__back-btn {
+  width: 100%;
+  padding: 10px;
+  margin-top: 12px;
+  background-color: var(--color-bg, #f5f5f5);
+  border: 1px solid var(--color-border, #e0e0e0);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  transition: all 0.2s;
+  color: white;
+}
+
+.sidebar__back-btn:hover {
+  background-color: var(--color-accent, #4a90e2);
+  color: white;
+  border-color: var(--color-accent, #4a90e2);
+}
+
+/* === ОТОБРАЖЕНИЕ ОДНОЙ СТАТЬИ === */
+.article-empty-state {
+  padding: 40px 20px;
+  text-align: center;
+  color: var(--color-text-secondary, #666);
+  font-size: 14px;
+}
+
+.article-single {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.article__actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.article__action-btn {
+  padding: 12px 20px;
+  font-size: 14px;
+  border: 1px solid var(--color-border, #e0e0e0);
+  background-color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-weight: 600;
+}
+
+.article__action-btn:hover {
+  background-color: var(--color-accent, #4a90e2);
+  color: white;
+  border-color: var(--color-accent, #4a90e2);
+}
+
+.article__action-btn.bookmarked {
+  background-color: #ffd700;
+  border-color: #ffd700;
+  color: #333;
+}
+
+.article__action-btn.cited {
+  background-color: #51cf66;
+  border-color: #51cf66;
+  color: white;
+}
+
+.sidebar__bookmarks-header {
+  display: contents;
+}
+
+.sidebar__results-actions {
+  display: flex;
+  gap: 8px;
+  padding: 12px;
+  border-top: 1px solid var(--color-border, #e0e0e0);
+}
+
+.sidebar__show-search-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: var(--color-bg, #f5f5f5);
+  border: 1px solid var(--color-border, #e0e0e0);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  transition: all 0.2s;
+  margin-top: 8px;
+  color: white;
+}
+
+.sidebar__show-search-btn:hover {
+  background-color: var(--color-accent, #4a90e2);
+  color: white;
+  border-color: var(--color-accent, #4a90e2);
+}
+
   clip: rect(0, 0, 0, 0) !important;
   white-space: nowrap !important;
   border: 0 !important;

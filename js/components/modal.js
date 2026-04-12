@@ -7,7 +7,7 @@ const initAuthModal = () => {
 
   if (!modal || openBtns.length === 0) return;
 
-  // Открытие модального окна
+  // Открытие модалки
   openBtns.forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
@@ -16,7 +16,7 @@ const initAuthModal = () => {
     });
   });
 
-  // Закрытие модального окна
+  // Закрытие модалки
   const closeModal = () => {
     modal.classList.remove('active');
     document.body.style.overflow = '';
@@ -33,7 +33,7 @@ const initAuthModal = () => {
     }
   });
 
-  // Закрытие при нажатии Escape
+  // Закрытие при Escape
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && modal.classList.contains('active')) {
       closeModal();

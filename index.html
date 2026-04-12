@@ -42,6 +42,11 @@
               </svg>
             </button>
           </li>
+          <li class="nav__item nav__item--bookmarks-toggle">
+            <button class="nav__link nav__link--bookmarks-toggle" id="desktop-bookmarks-toggle" aria-label="Открыть закладки" title="Закладки">
+              📖
+            </button>
+          </li>
           <li class="nav__item nav__item--mobile-bookmarks">
             <button class="nav__link nav__link--bookmarks" id="mobile-bookmarks-toggle" aria-label="Открыть закладки" title="Закладки">
               ⭐
@@ -52,6 +57,9 @@
         <div class="nav--mobile">
           <a href="#" class="nav-mobile__link" data-nav="magazine">Magazine</a>
           <a href="#" class="nav-mobile__link" data-nav="authors">Authors</a>
+          <button class="nav-mobile__link nav-mobile__link--bookmarks" id="mobile-menu-bookmarks" aria-label="Закладки" title="Открыть закладки">
+            📖 Закладки
+          </button>
           <a href="#" class="nav-mobile__link" data-open-auth>Login</a>
         </div>
       </nav>
@@ -163,246 +171,14 @@
     </section>
   </main>
 
-<section class="scientific-article-section" id="authors-section" aria-labelledby="article-title">
-  <h2 class="visually-hidden">Scientific articles</h2>
-  <div class="scientific-article-wrapper">
-
-    <article class="scientific-article__card"
-             data-article-id="article_quantum_insulators"
-             itemscope
-             itemtype="https://schema.org/ScholarlyArticle">
-
-      <header class="scientific-article__header">
-        <span class="scientific-article__tag">Scientific Article</span>
-
-        <h2 id="article-title"
-            class="scientific-article__title"
-            itemprop="headline">
-          Quantum Entanglement in Topological Insulators: Experimental Verification and Theoretical Implications
-        </h2>
-
-        <div class="scientific-article__meta">
-          <time datetime="2025-02-01" itemprop="datePublished">
-            1 февраля 2025 г.
-          </time>
-
-          <span class="scientific-article__separator">•</span>
-
-          <span itemprop="author"
-                itemscope
-                itemtype="https://schema.org/Person">
-            <span itemprop="name">Дмитрий С. Кузнецов</span>
-          </span>
-        </div>
-      </header>
-
-      <div class="scientific-article__body" itemprop="articleBody">
-        <h3>Аннотация</h3>
-        <p itemprop="abstract">
-          В данной работе представлены результаты экспериментальной проверки квантовой
-          запутанности в двумерных топологических изоляторах при температуре 1.8 K.
-          Используя метод сканирующей туннельной спектроскопии с пространственным
-          разрешением, обнаружены устойчивые спиновые корреляции между краевыми
-          состояниями образца, что согласуется с предсказаниями теории топологической
-          защиты. Предложена модифицированная модель электрон-фононного взаимодействия,
-          объясняющая наблюдаемые отклонения от идеального поведения.
-        </p>
-
-        <h3>Ключевые слова</h3>
-        <div class="scientific-article__keywords">
-          <span itemprop="keywords">топологические изоляторы</span>
-          <span itemprop="keywords">квантовая запутанность</span>
-          <span itemprop="keywords">сканирующая туннельная спектроскопия</span>
-          <span itemprop="keywords">спиновые краевые состояния</span>
-        </div>
-      </div>
-
-      <figure class="scientific-article__figure"
-              itemprop="image"
-              itemscope
-              itemtype="https://schema.org/ImageObject">
-        <img class="scientific-article__image" src="images/part.jpg"
-             alt="Схема экспериментальной установки: топологический изолятор Bi₂Se₃ с STM и детектированием спиновых корреляций"
-             loading="lazy">
-        <figcaption itemprop="caption">
-          Рис. 1. Экспериментальная схема и распределение вероятности совместного измерения спинов.
-          Цветовая шкала: красный — высокая корреляция (C &gt; 0.8), синий — антикорреляция.
-        </figcaption>
-      </figure>
-
-      <footer class="scientific-article__footer">
-        <p>
-          <strong>Журнал:</strong>
-          <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical">
-            <span itemprop="name">Fyrre Journal of Advanced Physics</span>
-          </span>,
-          Том 12, Выпуск 3
-        </p>
-
-        <p>
-          <strong>Страницы:</strong>
-          <span itemprop="pageStart">45</span>–<span itemprop="pageEnd">62</span>
-        </p>
-
-
-        <p>
-          <strong>Язык:</strong>
-          <span itemprop="inLanguage">ru</span>
-        </p>
-
-        <p>
-          <strong>Доступ:</strong>
-          <span itemprop="isAccessibleForFree" content="true">
-            Бесплатный доступ
-          </span>
-        </p>
-      </footer>
-
-    </article>
-
-    <article class="scientific-article__card"
-             data-article-id="article_graphene_composites"
-             itemscope
-             itemtype="https://schema.org/ScholarlyArticle">
-
-      <header class="scientific-article__header">
-        <span class="scientific-article__tag">Scientific Article</span>
-
-        <h2 class="scientific-article__title"
-            itemprop="headline">
-          Синтез и характеризация графеновых нанокомпозитов для биомедицинских приложений
-        </h2>
-
-        <div class="scientific-article__meta">
-          <time datetime="2025-02-15" itemprop="datePublished">
-            15 февраля 2025 г.
-          </time>
-
-          <span class="scientific-article__separator">•</span>
-
-          <span itemprop="author"
-                itemscope
-                itemtype="https://schema.org/Person">
-            <span itemprop="name">Мария В. Петрова</span>
-          </span>
-        </div>
-      </header>
-
-      <div class="scientific-article__body" itemprop="articleBody">
-        <h3>Аннотация</h3>
-        <p itemprop="abstract">
-          Исследование синтеза новых графеновых нанокомпозитов с использованием химического осаждения из газовой фазы. Полученные материалы показывают повышенную биосовместимость и перспективны для применения в тканевой инженерии. Проведен анализ структурных свойств методами электронной микроскопии и спектроскопии комбинационного рассеяния света.
-        </p>
-
-        <h3>Ключевые слова</h3>
-        <div class="scientific-article__keywords">
-          <span itemprop="keywords">графеновые нанокомпозиты</span>
-          <span itemprop="keywords">биосовместимость</span>
-          <span itemprop="keywords">нанотехнология</span>
-        </div>
-      </div>
-
-      <footer class="scientific-article__footer">
-        <p>
-          <strong>Журнал:</strong>
-          <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical">
-            <span itemprop="name">Fyrre Journal of Nanoscience</span>
-          </span>,
-          Том 8, Выпуск 2
-        </p>
-
-        <p>
-          <strong>Страницы:</strong>
-          <span itemprop="pageStart">123</span>–<span itemprop="pageEnd">145</span>
-        </p>
-
-        <p>
-          <strong>Язык:</strong>
-          <span itemprop="inLanguage">ru</span>
-        </p>
-
-        <p>
-          <strong>Доступ:</strong>
-          <span itemprop="isAccessibleForFree" content="true">
-            Бесплатный доступ
-          </span>
-        </p>
-      </footer>
-
-    </article>
-
-    <article class="scientific-article__card"
-             data-article-id="article_arctic_climate"
-             itemscope
-             itemtype="https://schema.org/ScholarlyArticle">
-
-      <header class="scientific-article__header">
-        <span class="scientific-article__tag">Scientific Article</span>
-
-        <h2 class="scientific-article__title"
-            itemprop="headline">
-          Климатические изменения и адаптация биологических систем в Арктике
-        </h2>
-
-        <div class="scientific-article__meta">
-          <time datetime="2025-03-01" itemprop="datePublished">
-            1 марта 2025 г.
-          </time>
-
-          <span class="scientific-article__separator">•</span>
-
-          <span itemprop="author"
-                itemscope
-                itemtype="https://schema.org/Person">
-            <span itemprop="name">Алексей Н. Соколов</span>
-          </span>
-        </div>
-      </header>
-
-      <div class="scientific-article__body" itemprop="articleBody">
-        <h3>Аннотация</h3>
-        <p itemprop="abstract">
-          Комплексное исследование влияния климатических изменений на арктические экосистемы. Анализ многолетних наблюдений показывает ускоренное потепление и его воздействие на миграционные паттерны млекопитающих. Предложены механизмы адаптации для сохранения биоразнообразия в условиях меняющегося климата.
-        </p>
-
-        <h3>Ключевые слова</h3>
-        <div class="scientific-article__keywords">
-          <span itemprop="keywords">климатические изменения</span>
-          <span itemprop="keywords">Арктика</span>
-          <span itemprop="keywords">биологическая адаптация</span>
-          <span itemprop="keywords">экология</span>
-        </div>
-      </div>
-
-      <footer class="scientific-article__footer">
-        <p>
-          <strong>Журнал:</strong>
-          <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical">
-            <span itemprop="name">Fyrre Journal of Environmental Science</span>
-          </span>,
-          Том 5, Выпуск 1
-        </p>
-
-        <p>
-          <strong>Страницы:</strong>
-          <span itemprop="pageStart">78</span>–<span itemprop="pageEnd">96</span>
-        </p>
-
-        <p>
-          <strong>Язык:</strong>
-          <span itemprop="inLanguage">ru</span>
-        </p>
-
-        <p>
-          <strong>Доступ:</strong>
-          <span itemprop="isAccessibleForFree" content="true">
-            Бесплатный доступ
-          </span>
-        </p>
-      </footer>
-
-    </article>
-
+<!-- === РАЗДЕЛ ОТОБРАЖЕНИЯ СТАТЕЙ === -->
+<section class="scientific-article-section" id="article-display-section" aria-labelledby="article-title">
+  <h2 class="visually-hidden">Display selected article</h2>
+  <div class="scientific-article-wrapper" id="article-container">
+    <!-- Контент загружается динамически при клике на статью -->
+    <div class="article-empty-state">
+      <p>Выберите статью из закладок или результатов поиска</p>
+    </div>
   </div>
 </section>
 
@@ -453,8 +229,44 @@
         ✕
       </button>
     </div>
+
+    <!-- === ПОЛЕ ПОИСКА === -->
+    <div class="sidebar__search" id="sidebar-search-section">
+      <form class="search-form" id="arxiv-search-form">
+        <div class="search-form__group">
+          <input 
+            type="text" 
+            id="arxiv-search-input" 
+            class="search-form__input"
+            placeholder="Поиск в arXiv..." 
+            autocomplete="off"
+            aria-label="Поиск статей в arXiv"
+          >
+          <button type="submit" class="search-form__btn" aria-label="Найти">
+            🔍
+          </button>
+        </div>
+        <div class="search-form__status" id="search-status"></div>
+      </form>
+    </div>
+
+    <!-- === РЕЗУЛЬТАТЫ ПОИСКА === -->
+    <div class="sidebar__content" id="search-results-section" style="display:none;">
+      <h4 class="sidebar__subtitle">Результаты поиска</h4>
+      <div id="arxiv-search-results" class="sidebar__results"></div>
+      <div class="sidebar__results-actions">
+        <button class="sidebar__back-btn" id="back-to-bookmarks">← Закладки</button>
+      </div>
+    </div>
+
+    <!-- === СОХРАНЕННЫЕ ЗАКЛАДКИ === -->
     <div class="sidebar__content" id="bookmarks-sidebar-list">
-      <p class="sidebar__empty">Нет сохраненных статей</p>
+      <div class="sidebar__bookmarks-header">
+        <p class="sidebar__empty">Нет сохраненных статей</p>
+        <button class="sidebar__show-search-btn" id="show-search-btn" style="display:none;" title="Показать результаты поиска">
+          🔍 Поиск
+        </button>
+      </div>
     </div>
   </aside>
 

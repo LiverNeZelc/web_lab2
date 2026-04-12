@@ -1,5 +1,3 @@
-// === Примеры тестирования ===
-
 // Проверка что API готов
 if (typeof window.AppAPI === 'undefined') {
   console.warn('⚠️ window.AppAPI не инициализирован. Тесты отложены...');

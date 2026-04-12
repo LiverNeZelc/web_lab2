@@ -36,6 +36,7 @@ const LocalStorageService = {
         ...article,
         savedAt: new Date().toISOString()
       });
+      console.log('💾 Закладка сохранена:', article);  // Логирование
       localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
       return true;
     }

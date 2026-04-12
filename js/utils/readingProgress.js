@@ -1,4 +1,4 @@
-// Прогресс-бар чтения статьи
+// бар чтения статьи
 const initReadingProgress = () => {
   const progressBar = document.createElement('div');
   progressBar.className = 'reading-progress';
@@ -29,7 +29,7 @@ const initReadingProgress = () => {
     progressBar.style.width = progress + '%';
   };
 
-  // Cлушатели на каждую статью
+  // слушатели каждой статьи
   document.querySelectorAll('.scientific-article__card').forEach(article => {
     article.addEventListener('mouseenter', () => {
       currentArticle = article;
